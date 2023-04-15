@@ -10,6 +10,15 @@ ion-footer {
             border: 1px solid var(--ion-color-medium);
             border-radius: 20px;
             margin: 0.5vh 0;
+            padding-left: 0.938rem;
         }
+        ion-buttons {
+            ion-fab-button {
+                --box-shadow: none;
+            }
+            .rotate45up {
+                transform: rotate(-45deg);
+            }
+         }
     }
 }

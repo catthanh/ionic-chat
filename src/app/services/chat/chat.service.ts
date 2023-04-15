@@ -114,5 +114,4 @@ export class ChatService {
       throw(e);
     }
   }
-
 }

@@ -74,4 +74,17 @@ export class ChatPage implements OnInit {
       // this.global.errorToast();
     }
   }
+
+  async sendMessageWithKey(event: any) {
+    await this.sendMessage();
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }
+
+  // newLine(event: any) {
+  //   // var text = <HTMLInputElement>document.getElementById("chat-text-area");
+  //   // text.value += "\n"
+  //   // text.innerHTML += "<br/>";
+  //   event.preventDefault();
+  // }
 }
