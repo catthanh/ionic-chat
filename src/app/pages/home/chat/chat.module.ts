@@ -1,14 +1,15 @@
-import { ComponentsModule } from './../../../components/components.module';
-import { ChatBoxComponent } from './../../../components/chat-box/chat-box.component';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from "./../../../components/components.module";
+import { ChatBoxComponent } from "./../../../components/chat-box/chat-box.component";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { ChatPageRoutingModule } from './chat-routing.module';
+import { ChatPageRoutingModule } from "./chat-routing.module";
 
-import { ChatPage } from './chat.page';
+import { ChatPage } from "./chat.page";
+import { TransferButtonComponent } from "../../../components/transfer-button/transfer-button.component";
 
 @NgModule({
   imports: [
@@ -16,8 +17,8 @@ import { ChatPage } from './chat.page';
     FormsModule,
     IonicModule,
     ChatPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ],
-  declarations: [ChatPage, ChatBoxComponent]
+  declarations: [ChatPage, ChatBoxComponent, TransferButtonComponent],
 })
 export class ChatPageModule {}
