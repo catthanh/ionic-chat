@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -26,65 +26,56 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .circleBase {
-    border-radius: 50%;
-  }
-  
-  .type1 {
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    background: linear-gradient(90deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
-    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
-    top: -50px;
-    left: -50px;
-  }
-  
-  .type2 {
-    width: 100px;
-    height: 100px;
-    background: var(--ion-color-tertiary);
-  }
-  
-  .circle1 {
-    margin-left: 180px;
-    margin-top: 50px;
-  }
-  
-  .circle2 {
-    position: absolute;
-    top: 150px;
-    left: -20px;
-  }
-  
-  .welcomeMessage {
-    position: absolute;
-    top: 70px;
-    left: 50px;
-    p {
-      font-weight: bold;
-      font-size: 1.8rem;
-      margin-top: 5px;
-    }
-  }
-  
-  .error {
-    font-size: 0.75rem;
-  }
+  border-radius: 50%;
+}
 
-  // .ion-page {
-  //   background: linear-gradient(180deg, rgba(198, 255, 221, 0.5) 0%, rgba(251, 215, 134, 0.5) 50%, rgba(247, 121, 125, 0.5) 100%);;
-  // }
-  
-  ion-popover {
-    --background: white;
-    --backdrop-opacity: 0;
-  }
+.type1 {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(
+    90deg,
+    var(--ion-color-primary) 0%,
+    var(--ion-color-secondary) 100%
+  );
+  box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+  top: -50px;
+  left: -50px;
+}
 
-  ion-modal {
-    --height: auto;
-    --border-radius: 20px;
-  }
+.type2 {
+  width: 100px;
+  height: 100px;
+  background: var(--ion-color-tertiary);
+}
 
-  ion-modal::part(backdrop) {
-    background: transparent;
+.circle1 {
+  margin-left: 180px;
+  margin-top: 50px;
+}
+
+.circle2 {
+  position: absolute;
+  top: 150px;
+  left: -20px;
+}
+
+.welcomeMessage {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  p {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 5px;
   }
+}
+
+.error {
+  font-size: 0.75rem;
+}
+
+ion-popover {
+  --background: white;
+  --backdrop-opacity: 0;
+}

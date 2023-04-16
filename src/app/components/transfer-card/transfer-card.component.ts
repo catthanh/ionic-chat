@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { ModalController } from "@ionic/angular";
+import { ModalController, NavController } from "@ionic/angular";
 import { BankApiService } from "../../services/bankApi/bank-api.service";
 
 @Component({
@@ -14,24 +14,57 @@ export class TransferCardComponent {
   @Input()
   transferBankName: string;
   transferAmount: number;
-  name: string;
 
   constructor(
     private modalCtrl: ModalController,
-    private bankApiService: BankApiService
+    private bankApiService: BankApiService,
+    private navCtrl: NavController
   ) {}
 
   cancel() {
     // close the modal
-    return this.modalCtrl.dismiss(null, "cancel");
+    this.modalCtrl.dismiss(null, "cancel");
   }
 
   confirm() {
     // change to transfer page
-    return this.modalCtrl.dismiss(this.name, "confirm");
+    this.modalCtrl.dismiss(null, "confirm");
+    this.goToTransferPage();
   }
 
+  goToTransferPage() {
+    console.log(
+      "transfer?" +
+        (this.transferRecipient
+          ? "transferRecipient=" + this.transferRecipient + "&"
+          : "") +
+        (this.transferAccountNumber
+          ? "transferAccountNumber=" + this.transferAccountNumber + "&"
+          : "") +
+        (this.transferBankName
+          ? "transferBankName=" + this.transferBankName + "&"
+          : "") +
+        (this.transferAmount ? "transferAmount=" + this.transferAmount : "")
+    );
+    this.navCtrl.navigateForward(
+      "transfer?" +
+        (this.transferRecipient
+          ? "transferRecipient=" + this.transferRecipient + "&"
+          : "") +
+        (this.transferAccountNumber
+          ? "transferAccountNumber=" + this.transferAccountNumber + "&"
+          : "") +
+        (this.transferBankName
+          ? "transferBankName=" + this.transferBankName + "&"
+          : "") +
+        (this.transferAmount ? "transferAmount=" + this.transferAmount : "")
+    );
+  }
   ngOnInit() {
     //set the name of the recipient
+    this.transferRecipient = "NGUYEN GIA CAT THANH";
+    this.transferAmount = 1000000;
+    this.transferBankName = "BIDV";
+    this.transferAccountNumber = "0987515150";
   }
 }

@@ -17,6 +17,8 @@ export class TransferButtonComponent implements OnInit {
   async openModal() {
     const modal = await this.modalCtrl.create({
       component: TransferCardComponent,
+      breakpoints: [0, 0.7],
+      initialBreakpoint: 0.7,
     });
     modal.present();
 

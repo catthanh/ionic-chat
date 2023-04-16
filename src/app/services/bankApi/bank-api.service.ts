@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -10,5 +10,9 @@ export class BankApiService {
 
   getAccountInfo(): Observable<any> {
     return this.http.get("https://api.example.com/data");
+  }
+
+  getBankList(): Observable<any> {
+    return this.http.get("https://api.vietqr.io/v2/banks");
   }
 }

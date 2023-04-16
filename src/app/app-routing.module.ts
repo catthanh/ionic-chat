@@ -21,6 +21,14 @@ const routes: Routes = [
     path: 'transfer',
     loadChildren: () => import('./pages/transfer/transfer.module').then( m => m.TransferPageModule)
   },
+  {
+    path: 'otp',
+    loadChildren: () => import('./pages/otp/otp.module').then( m => m.OtpPageModule)
+  },
+  {
+    path: 'successful-transfer',
+    loadChildren: () => import('./pages/successful-transfer/successful-transfer.module').then( m => m.SuccessfulTransferPageModule)
+  },
 ];
 
 @NgModule({

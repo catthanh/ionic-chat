@@ -16,7 +16,7 @@ export class ChatBoxComponent implements OnInit {
     console.log("chat: ", this.chat);
     let accountNumberPattern = /\d{9,14}/m;
     let accountNumber = this.chat.message.match(accountNumberPattern);
-    if (accountNumber) {
+    if (accountNumber && this.chat.sender != this.current_user_id) {
       this.transferInfoDetected = true;
     }
   }

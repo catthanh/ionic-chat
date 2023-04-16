@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { TransferPage } from './transfer.page';
+import { TransferPage } from "./transfer.page";
 
 const routes: Routes = [
   {
-    path: '',
-    component: TransferPage
-  }
+    path: "",
+    component: TransferPage,
+  },
 ];
 
 @NgModule({
