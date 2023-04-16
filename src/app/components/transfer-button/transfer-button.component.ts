@@ -9,10 +9,13 @@ import { TransferCardComponent } from "../transfer-card/transfer-card.component"
 })
 export class TransferButtonComponent implements OnInit {
   @Input() hidden: boolean;
+  @Input() transferAccountNumber: string;
 
   constructor(private modalCtrl: ModalController) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.transferAccountNumber);
+  }
 
   async openModal() {
     const modal = await this.modalCtrl.create({
