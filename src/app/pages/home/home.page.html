@@ -1,6 +1,6 @@
 <ion-header class="title-header">
   <ion-toolbar color="primary">
-    <ion-title>Fire Chat</ion-title>
+    <ion-title>Circus Chat</ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear" id="popover">
         <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
@@ -75,7 +75,12 @@
     </ion-fab-button>
   </ion-fab>
 
-  <ion-modal #new_chat [isOpen]="open_new_chat" (willDismiss)="onWillDismiss($event)">
+  <ion-modal 
+    #new_chat 
+    [isOpen]="open_new_chat" 
+    (willDismiss)="onWillDismiss($event)"
+    [initialBreakpoint]="1"
+    [breakpoints]="[0, 1]">
     <ng-template>
       <ion-header>
         <ion-toolbar color="primary">
